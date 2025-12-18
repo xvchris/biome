@@ -6290,6 +6290,13 @@
 						{ "type": "null" }
 					]
 				},
+				"useTailwindShorthandClasses": {
+					"description": "Enforce using less Tailwind utilities instead of multiple utilities that are functionally the same.\nSee https://biomejs.dev/linter/rules/use-tailwind-shorthand-classes",
+					"anyOf": [
+						{ "$ref": "#/$defs/UseTailwindShorthandClassesConfiguration" },
+						{ "type": "null" }
+					]
+				},
 				"useVueConsistentDefinePropsDeclaration": {
 					"description": "Enforce consistent defineProps declaration style.\nSee https://biomejs.dev/linter/rules/use-vue-consistent-define-props-declaration",
 					"anyOf": [
@@ -10878,6 +10885,16 @@
 			"additionalProperties": false,
 			"required": ["level"]
 		},
+		"RuleWithUseTailwindShorthandClassesOptions": {
+			"type": "object",
+			"properties": {
+				"fix": { "anyOf": [{ "$ref": "#/$defs/FixKind" }, { "type": "null" }] },
+				"level": { "$ref": "#/$defs/RulePlainConfiguration" },
+				"options": { "$ref": "#/$defs/UseTailwindShorthandClassesOptions" }
+			},
+			"additionalProperties": false,
+			"required": ["level"]
+		},
 		"RuleWithUseTemplateOptions": {
 			"type": "object",
 			"properties": {
@@ -14190,6 +14207,16 @@
 			]
 		},
 		"UseSymbolDescriptionOptions": {
+			"type": "object",
+			"additionalProperties": false
+		},
+		"UseTailwindShorthandClassesConfiguration": {
+			"oneOf": [
+				{ "$ref": "#/$defs/RulePlainConfiguration" },
+				{ "$ref": "#/$defs/RuleWithUseTailwindShorthandClassesOptions" }
+			]
+		},
+		"UseTailwindShorthandClassesOptions": {
 			"type": "object",
 			"additionalProperties": false
 		},
