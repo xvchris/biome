@@ -816,7 +816,6 @@ dependencies = [
  "biome_rule_options",
  "biome_string_case",
  "biome_suppression",
- "biome_tailwind_logic",
  "biome_test_utils",
  "camino",
  "codspeed-criterion-compat",
@@ -936,7 +935,6 @@ dependencies = [
  "biome_service",
  "biome_string_case",
  "biome_suppression",
- "biome_tailwind_logic",
  "biome_tailwind_parser",
  "biome_tailwind_syntax",
  "biome_test_utils",
@@ -1718,7 +1716,6 @@ dependencies = [
  "biome_rule_options",
  "biome_suppression",
  "biome_tailwind_factory",
- "biome_tailwind_logic",
  "biome_tailwind_parser",
  "biome_tailwind_syntax",
  "biome_test_utils",
@@ -1735,16 +1732,6 @@ name = "biome_tailwind_factory"
 version = "0.0.1"
 dependencies = [
  "biome_rowan",
- "biome_tailwind_syntax",
-]
-
-[[package]]
-name = "biome_tailwind_logic"
-version = "0.0.1"
-dependencies = [
- "biome_analyze",
- "biome_rowan",
- "biome_tailwind_parser",
  "biome_tailwind_syntax",
 ]
 
