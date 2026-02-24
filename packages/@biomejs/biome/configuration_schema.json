@@ -6291,7 +6291,7 @@
 					]
 				},
 				"useTailwindShorthandClasses": {
-					"description": "Enforce using less Tailwind utilities instead of multiple utilities that are functionally the same.\nSee https://biomejs.dev/linter/rules/use-tailwind-shorthand-classes",
+					"description": "Enforce using fewer Tailwind utilities instead of multiple utilities that are functionally the same.\nSee https://biomejs.dev/linter/rules/use-tailwind-shorthand-classes",
 					"anyOf": [
 						{ "$ref": "#/$defs/UseTailwindShorthandClassesConfiguration" },
 						{ "type": "null" }

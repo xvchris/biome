@@ -2425,7 +2425,7 @@ See https://biomejs.dev/linter/rules/use-spread
 	 */
 	useSpread?: UseSpreadConfiguration;
 	/**
-	* Enforce using less Tailwind utilities instead of multiple utilities that are functionally the same.
+	* Enforce using fewer Tailwind utilities instead of multiple utilities that are functionally the same.
 See https://biomejs.dev/linter/rules/use-tailwind-shorthand-classes 
 	 */
 	useTailwindShorthandClasses?: UseTailwindShorthandClassesConfiguration;
@@ -8832,7 +8832,8 @@ export type DocumentFileSource =
 	| { Graphql: GraphqlFileSource }
 	| { Html: HtmlFileSource }
 	| { Grit: GritFileSource }
-	| { Markdown: MdFileSource };
+	| { Markdown: MdFileSource }
+	| "Tailwind";
 export interface JsFileSource {
 	/**
 	* Used to mark if the JavaScript is embedded inside some particular files. This affects the parsing.
