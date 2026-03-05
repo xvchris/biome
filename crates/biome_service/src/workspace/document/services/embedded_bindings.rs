@@ -322,20 +322,20 @@ impl EmbeddedBuilder {
         if let Some(type_arguments) = call_expression.type_arguments()
             && let Some(Ok(AnyTsType::TsObjectType(object_type))) =
                 type_arguments.ts_type_argument_list().iter().next()
-            {
-                for member in object_type.members() {
-                    if let biome_js_syntax::AnyTsTypeMember::TsPropertySignatureTypeMember(property) =
-                        member
-                        && let Ok(name) = property.name()
-                        && let Some(literal_name) = name.as_js_literal_member_name()
-                        && let Ok(value) = literal_name.value()
-                    {
-                        self.js_bindings
-                            .insert(value.text_trimmed_range(), value.token_text_trimmed());
-                    }
+        {
+            for member in object_type.members() {
+                if let biome_js_syntax::AnyTsTypeMember::TsPropertySignatureTypeMember(property) =
+                    member
+                    && let Ok(name) = property.name()
+                    && let Some(literal_name) = name.as_js_literal_member_name()
+                    && let Ok(value) = literal_name.value()
+                {
+                    self.js_bindings
+                        .insert(value.text_trimmed_range(), value.token_text_trimmed());
                 }
-                return;
             }
+            return;
+        }
 
         // Runtime argument forms: defineProps({ ... }) or defineProps([...])
         let Ok(arguments) = call_expression.arguments() else {
