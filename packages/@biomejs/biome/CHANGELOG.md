@@ -1,5 +1,15 @@
 # @biomejs/biome
 
+## 2.4.7
+
+### Patch Changes
+
+- [#9344](https://github.com/biomejs/biome/pull/9344) [`cb4d7d7`](https://github.com/biomejs/biome/commit/cb4d7d7a2cc518e3e815405189c1bc596a249e6c) Thanks [@ematipico](https://github.com/ematipico)! - Fixed [#6921](https://github.com/biomejs/biome/issues/6921): `noShadow` no longer incorrectly flags destructured variable bindings in sibling scopes as shadowing. Object destructuring, array destructuring, nested patterns, and rest elements are now properly recognized as declarations.
+
+- [#9345](https://github.com/biomejs/biome/pull/9345) [`70c2d4e`](https://github.com/biomejs/biome/commit/70c2d4e8758f9f3e494d04dc060e116eb2947540) Thanks [@ematipico](https://github.com/ematipico)! - Fixed [#7214](https://github.com/biomejs/biome/issues/7214): [`useOptionalChain`](https://biomejs.dev/linter/rules/use-optional-chain/) now detects optional chain patterns that don't start at the beginning of a logical AND expression. For example, `bar && foo && foo.length` is now correctly flagged and fixed to `bar && foo?.length`.
+
+- [#9351](https://github.com/biomejs/biome/pull/9351) [`5046d2b`](https://github.com/biomejs/biome/commit/5046d2b4f04849a35ea3c5483f22178c1817f6da) Thanks [@Netail](https://github.com/Netail)! - Expanded the [`noNegationElse`](https://biomejs.dev/linter/rules/no-negation-else/) rule to cover the inequality & strict inequality operator.
+
 ## 2.4.6
 
 ### Patch Changes
